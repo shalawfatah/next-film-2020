@@ -1,65 +1,40 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import SingleFilm from '../components/SingleFilm'
+import Navigation from '../components/Navigation'
+import Header from '../components/Header'
+import Text from '../components/Texts'
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div class="container px-5 pb-24 mx-auto">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+      <title>فیلمۆگرافی</title>
       </Head>
+      <Navigation />
+      <Header heading="باشترین فیلمەکانی ٢٠٢٠" subheading="لەنێو لیستی فیلمەکانی ئەمساڵدا ئەم فیلمانە سەرنجڕاکێش بوون" />
+      <div className="flex flex-wrap justify-center cursor-pointer">
+      <SingleFilm image="/nrsa-poster.jpg" genre="ئێلیزا هیتمان" rank="باشترین دراما" titleEnglish="Never, Rarely, Sometimes, Always" title="هەرگیز، کەمجار، هەندێکجار، هەمیشە" summary={Text.nrsa} linkbest="https://www.imdb.com/title/tt7772582/" />
+      <SingleFilm image="/half-of-it.jpg" genre="ئالیس وو" rank="باشترین کۆمیدی" title="سەرتوێژەکەی" titleEnglish="The Half Of It" summary={Text.thot} linkbest="https://www.imdb.com/title/tt9683478/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/anotherround.jpg" genre="تۆماس ڤینتەربێرگ" rank="باشترین بەگشتی" title="سەرێ بڕۆین" titleEnglish="Another Round" summary={Text.another} linkbest="https://www.imdb.com/title/tt10288566/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/sputnik.webp" genre="ئیگۆر ئابرامینکۆ" rank="باشترین ترسناك" title="سپەتنیك" titleEnglish="Sputnik" summary={Text.sputnik} linkbest="https://www.imdb.com/title/tt11905962/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/badedu.jpg" genre="کۆری فینلی" rank="باشترین بایۆگرافی" title="پەروەردەی خراپ" titleEnglish="Bad Education" summary={Text.badedu} linkbest="https://www.imdb.com/title/tt8206668/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/swallow.jpg" genre="کارلۆ میرابێلا-دەیڤس" rank="باشترین نهێنی ئامێز" title="قووتدان" titleEnglish="Swallow" summary={Text.swallow} linkbest="https://www.imdb.com/title/tt8372298/?ref_=nv_sr_srsg_3" />
+      <SingleFilm image="/togo.jpg" genre="ئەریکسۆن کۆر" rank="باشترین سەرکێشی" title="تۆگۆ" titleEnglish="Togo" summary={Text.togo} linkbest="https://www.imdb.com/title/tt5116302/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/greyhound.jpg" genre="ئارۆن شنایدەر" rank="باشترین جەنگی" title="گرەیهاوند - تانجی" titleEnglish="Greyhound" summary={Text.greyhound} linkbest="https://www.imdb.com/title/tt6048922/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/wayback.jpg" genre="گاڤن ئۆکۆنۆر" rank="باشترین وەرزش" title="گەڕانەوە" titleEnglish="The Way Back" summary={Text.wayback} linkbest="https://www.imdb.com/title/tt8544498/?ref_=nv_sr_srsg_0" />
+      <SingleFilm image="/cure.jpg" genre="ئەحمەد ئاتالای" rank="باشترین ئەکشن" title="چارەسەر" titleEnglish="The Cure" summary={Text.cure} linkbest="https://www.imdb.com/title/tt10763494/" />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+
+      </div>
     </div>
   )
 }
+// image, genre, title, summary
